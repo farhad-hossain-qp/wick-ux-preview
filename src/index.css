@@ -87,17 +87,47 @@ body {
   gap: 16px;
 }
 
+.intro {
+  margin-block-end: 32px;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding-inline-start: 20px;
+  list-style: disc;
+  font-size: 0.875rem;
+}
+
+.scenarioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
 .scenario {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 16px;
+  overflow: hidden;
+  background-color: var(--wu-surface, var(--wu-bg));
   border: 1px solid var(--wu-border);
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+  transition: box-shadow var(--wu-speed) var(--wu-easing);
+
+  &:hover {
+    box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
+  }
+}
+
+.scenarioHeader {
+  padding: 20px 20px 0;
 }
 
 .scenarioTitle {
-  margin: 0;
+  margin: 0 0 4px;
   font-size: 0.9375rem;
   font-weight: 600;
 }
@@ -108,13 +138,41 @@ body {
   font-size: 0.8125rem;
 }
 
-.output {
-  margin: 0;
-  padding: 8px;
-  overflow-x: auto;
-  font-size: 0.75rem;
+.scenarioBody {
+  flex: 1;
+  padding: 16px 20px 20px;
+}
+
+.scenarioResult {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  min-block-size: 44px;
+  padding: 10px 20px;
+  font-size: 0.8125rem;
   background-color: var(--wu-muted);
-  border-radius: 4px;
+  border-block-start: 1px solid var(--wu-border);
+}
+
+.resultLabel {
+  color: var(--wu-muted-fg);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.resultValue {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.resultEmpty {
+  color: var(--wu-muted-fg);
 }
 
 .cardBody {
