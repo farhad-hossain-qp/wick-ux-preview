@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  color: var(--wu-fg);
+  background-color: var(--wu-bg);
+  font-family: var(--wu-font-family, system-ui, sans-serif);
+}
+
+.page {
+  max-inline-size: 1200px;
+  margin-inline: auto;
+  padding: 24px 16px 64px;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 24px;
+}
+
+.topbarTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.version {
+  color: var(--wu-muted-fg);
+  font-size: 0.75rem;
+}
+
+.section {
+  margin-block-end: 40px;
+}
+
+.sectionHint {
+  margin-block: 4px 16px;
+  color: var(--wu-muted-fg);
+  font-size: 0.875rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-block-end: 12px;
+}
+
+.rowLabel {
+  min-inline-size: 110px;
+  color: var(--wu-muted-fg);
+  font-size: 0.75rem;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: 120px repeat(10, minmax(56px, 1fr));
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.paletteFamily {
+  align-self: center;
+  font-size: 0.8125rem;
+  text-transform: capitalize;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.6875rem;
+}
+
+.swatchColor {
+  block-size: 40px;
+  border: 1px solid var(--wu-border);
+  border-radius: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.scenario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--wu-border);
+  border-radius: 8px;
+}
+
+.scenarioTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.scenarioNote {
+  margin: 0;
+  color: var(--wu-muted-fg);
+  font-size: 0.8125rem;
+}
+
+.output {
+  margin: 0;
+  padding: 8px;
+  overflow-x: auto;
+  font-size: 0.75rem;
+  background-color: var(--wu-muted);
+  border-radius: 4px;
+}
+
+.cardBody {
+  padding: 12px;
+  font-size: 0.875rem;
+}
