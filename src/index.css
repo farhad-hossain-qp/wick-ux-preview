@@ -121,3 +121,11 @@ body {
   padding: 12px;
   font-size: 0.875rem;
 }
+
+[data-slot='wu-badge-indicator'][data-color='success'] {
+  color: var(--wu-color-green-700);
+}
+
+:root[data-theme='dark'] [data-slot='wu-badge-indicator'][data-color='success'] {
+  color: var(--wu-color-green-100);
+}
