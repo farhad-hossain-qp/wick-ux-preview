@@ -70,7 +70,7 @@ export function DateRangePage() {
           )}
         </Scenario>
 
-        <Scenario title="Primary trigger" note="Filled trigger button.">
+        <Scenario title="Primary trigger" note="Trigger with only a bottom line.">
           {onChange => <WuDateRangePicker Label="Date range" variant="primary" onChange={onChange} />}
         </Scenario>
 

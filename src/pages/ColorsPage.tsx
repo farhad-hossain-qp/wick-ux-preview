@@ -21,6 +21,7 @@ const BUTTON_VARIANTS = ['primary', 'secondary', 'outlined'] as const
 
 export function ColorsPage() {
   const [view, setView] = useState('week')
+  const [showClosable, setShowClosable] = useState(true)
 
   return (
     <>
@@ -65,7 +66,7 @@ export function ColorsPage() {
           <WuChip color="warning">Warning</WuChip>
           <WuChip color="danger">Danger</WuChip>
           <WuChip disabled>Disabled</WuChip>
-          <WuChip onClose={() => undefined}>Closable</WuChip>
+          {showClosable && <WuChip onClose={() => setShowClosable(false)}>Closable</WuChip>}
         </div>
         <div className="row">
           <span className="rowLabel">secondary</span>
@@ -144,7 +145,6 @@ export function ColorsPage() {
           <SampleCard title="Default" />
           <SampleCard title="Selected" selected />
           <SampleCard title="Disabled" disabled />
-          <SampleCard title="Dragging" dragging />
         </div>
       </section>
     </>
@@ -165,7 +165,7 @@ function Family({family}: {family: string}) {
   )
 }
 
-function SampleCard({title, ...props}: {title: string; selected?: boolean; disabled?: boolean; dragging?: boolean}) {
+function SampleCard({title, ...props}: {title: string; selected?: boolean; disabled?: boolean}) {
   return (
     <WuCard {...props}>
       <WuCardHeader className="cardBody">{title}</WuCardHeader>
